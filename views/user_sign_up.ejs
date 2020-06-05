@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/user_sign_up.css">
+
+<br>
+<br>
+
+<div class="container">
+  <br>
+
+  <div class="row">
+    <div class="col-12 col-sm-4 offset-sm-4 container-box">
+      <br>
+      <h1><%= title %></h1>
+      <form action="/users/create" method="POST"> 
+        <div class="form-group">
+            <input type="text" class="form-control input" name="name" required>
+            <span>Enter Your Name</span>
+        </div>
+      
+        <div class="form-group">
+          <input type="email" class="form-control input" name="email" required>
+          <span>Enter Username</span>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" class="form-control input" name="password" required>
+          <span>Enter Password</span>
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-control input" name="confirm_password" required>
+          <span>Confirm Password</span>
+        </div>
+
+      
+        <button type="submit" class="btn btn-primary mb-2" value="Sign Up">Sign Up</button>
+        <button type="reset" class="btn btn-secondary mb-2">Clear All</button>
+
+        <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="./signin">Already Registered? Sign In here</a> 
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/users/auth/google"><img src="/images/google.png" alt="Sign In/Up With Google"> Sign Up With Google</a>
+        </div>
+        <br>
+        <br>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+.container-box {
+  box-sizing: border-box;
+  background: white;
+  border: 2px solid #0c0c7a;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Input Fields Of The Form */ }
+  .container-box span {
+    position: absolute;
+    margin-top: -32px;
+    margin-left: -160px;
+    transition: 0.2s;
+    background: white;
+    color: #06064e;
+    pointer-events: none; }
+  .container-box input:focus ~ span,
+  .container-box input:valid ~ span {
+    margin-top: -48px;
+    font-size: 12px; }
+  .container-box h1 {
+    text-align: center; }
+  .container-box .dropdown-item img {
+    height: 2.5rem;
+    width: 2.5rem; }

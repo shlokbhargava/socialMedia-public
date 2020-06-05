@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-3 add-post">
+            <% if(locals.user) { %>
+            <h3>Add Post</h3>
+            <form action="/posts/create" method="POST" id="new-post-form">
+                <textarea name="content" placeholder="Post Here" required></textarea>
+                <button class="btn btn-block btn-outline-primary" type="submit">Post</button>
+            </form>
+            <% } %>
+            <br>
+            <br>
+            <br>
+            <div class="d-none d-sm-block" id="events-container">
+                <% if(locals.user) { %>
+                <h3>Events</h3>
+                <div class="events-list">
+                    <% for(event of event) { %>
+                    <%= event.description %>
+                    <a href="/events/delete/<%= event._id %>">
+                        <button type="submit" class="btn delete-button">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </a> <br>
+                    <i class="fas fa-calendar-day"></i> <%= event.date %>
+                    <br>
+                    <% } %>
+                </div>
+                <form action="/events/create" method="POST" id="event-form">
+                    <textarea name="description" placeholder="Add an event" required></textarea>
+                    <input type="date" name="date" required>
+                    <div class="button-box">
+                        <button class="btn btn-sm btn-outline-primary btn-1" type="submit"><i class="fas fa-plus"></i>
+                            Add Event</button>
+                        <button class="btn btn-sm btn-outline-secondary btn-2" type="reset"><i class="fas fa-redo"></i>
+                            Clear All</button>
+                    </div>
+                </form>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 post-display">
+            <h3>Posts</h3>
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of post) { %>
+                    <div class="posts-box">
+                        <%- include('_post') -%>
+                    </div>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="d-none d-sm-block col-sm-3">
+            <h3>Friends</h3>
+            <% for(u of all_users) { %>
+            <p class="friends-list">
+                <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                <button class="btn  btn-outline-primary btn-sm float-right">Connect</button>
+            </p>
+            <% } %>
+        
+        </div>
+    </div>
+</div>
+
+<% if(locals.user) { %>
+    <%- include('_chatting_engine') %>
+<% } %>
+
+
+
+
+
+
+
+<!-- importing this script for creating the comments -->
+<script src="/js/home_post_comments.js"></script>
+<script src="/js/home_posts.js"></script>
+
+
+<!-- import the script files for toggle likes, also run it over for the already present posts and comments on the page -->
+<script src="js/toggle_likes.js"></script>
+<script>
+    $('.toggle-like-button').each(function () {
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+
+<% if(locals.user) { %>
+    <script>
+        new ChatEngine('chatting-box', '<%= locals.user.email %>')
+    </script>
+<% } %>

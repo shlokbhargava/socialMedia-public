@@ -1,0 +1,39 @@
+
+  .container-box{
+    box-sizing: border-box;
+    background: white;
+    border: 2px solid rgb(12, 12, 122);
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Input Fields Of The Form */
+    span{
+      position: absolute;
+      margin-top: -32px;
+      margin-left: -160px;
+      transition: 0.2s;
+      background: white;
+      color: rgb(6, 6, 78);
+      pointer-events: none;
+    }
+
+    input:focus ~ span,
+    input:valid ~ span{
+        margin-top: -48px;
+        font-size: 12px;
+    }
+
+      h1{
+        text-align: center;
+      }
+
+      .dropdown-item{
+
+        img{
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+      }  
+
+  }

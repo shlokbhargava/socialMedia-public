@@ -1,0 +1,21 @@
+.container-box {
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  left: 38%;
+  width: 25vw;
+  border: 2px solid #0c0c7a;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Input Fields Of The Form */ }
+  .container-box .form-group input {
+    width: 99.9%; }
+  .container-box .dropdown-item img {
+    height: 2.5rem;
+    width: 2.5rem; }
+
+@media (max-width: 500px) {
+  .container-box {
+    left: 0;
+    width: 100%; } }

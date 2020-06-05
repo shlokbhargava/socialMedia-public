@@ -1,0 +1,48 @@
+body {
+  background: none; }
+
+.add-post #new-post-form textarea {
+  width: 100%; }
+
+.add-post #new-post-form button {
+  margin-top: 5px; }
+
+.add-post #events-container .events-list {
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 60px; }
+  .add-post #events-container .events-list .delete-button {
+    color: red;
+    font-size: large;
+    float: right;
+    margin-top: -2.5%; }
+
+.add-post #events-container #event-form textarea, .add-post #events-container #event-form input {
+  margin-bottom: 5px;
+  width: 100%;
+  border: 0.5px solid gray; }
+
+.add-post #events-container #event-form .button-box {
+  padding-top: 5px; }
+  .add-post #events-container #event-form .button-box .btn-1, .add-post #events-container #event-form .button-box .btn-2 {
+    width: 49%; }
+
+.post-display h3 {
+  text-align: center; }
+
+.post-display .posts-box {
+  width: 85%;
+  margin-top: -53px;
+  margin-left: 20px;
+  margin-bottom: 65px;
+  padding: 10px;
+  box-shadow: 1px 1px 2px 2px #e6e3e3; }
+
+.post-display ul {
+  margin-top: 60px; }
+  .post-display ul li {
+    list-style: none; }
+
+.friends-list {
+  padding-top: 8px;
+  border-top: 1px solid lightgray; }

@@ -1,0 +1,11 @@
+body {
+  background: none; }
+
+.container {
+  margin-top: 20px; }
+  .container .center_align {
+    text-align: center; }
+
+#preview {
+  background-color: lightgray;
+  width: 100; }
