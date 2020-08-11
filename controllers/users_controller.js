@@ -15,7 +15,7 @@ module.exports.profile = function(request, response){
     User.findById(request.params.id, function(err, user){
         if(err){console.log('error in finding the user profile'); return;}
 
-        return response.render('users_profile', {
+        return response.render('users_profile', { 
             title: "User Profile",
             profile_user: user
         });
@@ -195,7 +195,7 @@ module.exports.event = async function(request, response){
 module.exports.signUp = function(request, response){
 
     if(request.isAuthenticated()){
-        return response.redirect('/users/profile');
+        return response.redirect('/');
     }
 
     return response.render('user_sign_up', {
@@ -207,7 +207,7 @@ module.exports.signUp = function(request, response){
 module.exports.signIn = function(request, response){
 
     if(request.isAuthenticated()){
-        return response.redirect('/users/profile');
+        return response.redirect('/');
     }
 
     return response.render('user_sign_in', {

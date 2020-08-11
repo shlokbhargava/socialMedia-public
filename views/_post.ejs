@@ -3,12 +3,16 @@
         <%= post.content %></>
         <% if (locals.user && locals.user.id == post.user.id) { %>
             <small>
-                <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">X</a>
+                <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </a>
             </small>
         <% } %>
         <br>
         <small>
-            -<%= post.user.name %>
+            -<%= post.user.name %> 
         </small>
         
         <!-- display the likes of this post, if the user is logged in, then show the link to toggle likes, else just show the count -->
@@ -16,7 +20,7 @@
         <!-- data attribute -->
         <small>
             <% if(locals.user) { %>
-                <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%= post._id %>&type=Post"><%= post.likes.length %> Likes
+                <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%= post._id %>&type=Post"><i class="fas fa-thumbs-up"></i> <%= post.likes.length %> 
                 </a>
             <% } else { %>
                 <%= post.likes.length %> Likes
@@ -27,9 +31,9 @@
     <div class="post-comments">
         <% if (locals.user) { %>
             <form action="/comments/create" method="POST" id="new-comment-form">
-                <input type="text" name="content" placeholder="Type Your Comments Here..." required>
+                <input type="text" class="form-control" name="content" placeholder="Type Your Comments Here..." required>
                 <input type="hidden" name="post" value="<%= post._id %>">
-                <input type="submit" value="Add Comment">
+                <button class="btn btn-outline-primary">Add Comment</button>
             </form>
         <% } %>
 

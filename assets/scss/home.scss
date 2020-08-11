@@ -2,7 +2,26 @@ body{
     background: none;
 }
 
-.add-post{
+.jumbotron {
+    height: 350px;
+    background-color: #e9ecef;
+
+    .display-4 {
+        font-family: 'Gill Sans';
+    }
+}
+
+#left-section{
+
+    background-color: #f8f8f8;
+
+    img {
+        border-radius: 50%;
+        height: 155px;
+        width: 175px;
+        margin-left: 15%;
+        margin-top: -120px!important;
+    }
 
     #new-post-form{
         
@@ -85,7 +104,37 @@ body{
         }
 }
 
-.friends-list{
-    padding-top: 8px;
-    border-top: 1px solid lightgray;
+
+#friends-section {
+    background-color: #f8f8f8;
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .friends-list{
+        padding-top: 8px;
+        border-top: 1px solid lightgray;
+    }
 }
+
+
+.bg {
+    position: relative;
+    text-align: center;
+    
+    img {
+        width: 100%;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 100px;
+        left: 160px;
+
+        
+    }
+}
+
+
+  

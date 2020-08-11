@@ -1,31 +1,41 @@
 body {
   background: none; }
 
-.add-post #new-post-form textarea {
-  width: 100%; }
+.jumbotron {
+  height: 350px;
+  background-color: #e9ecef; }
+  .jumbotron .display-4 {
+    font-family: 'Gill Sans'; }
 
-.add-post #new-post-form button {
-  margin-top: 5px; }
-
-.add-post #events-container .events-list {
-  border-top: 1px solid lightgray;
-  padding-top: 10px;
-  padding-bottom: 60px; }
-  .add-post #events-container .events-list .delete-button {
-    color: red;
-    font-size: large;
-    float: right;
-    margin-top: -2.5%; }
-
-.add-post #events-container #event-form textarea, .add-post #events-container #event-form input {
-  margin-bottom: 5px;
-  width: 100%;
-  border: 0.5px solid gray; }
-
-.add-post #events-container #event-form .button-box {
-  padding-top: 5px; }
-  .add-post #events-container #event-form .button-box .btn-1, .add-post #events-container #event-form .button-box .btn-2 {
-    width: 49%; }
+#left-section {
+  background-color: #f8f8f8; }
+  #left-section img {
+    border-radius: 50%;
+    height: 155px;
+    width: 175px;
+    margin-left: 15%;
+    margin-top: -120px !important; }
+  #left-section #new-post-form textarea {
+    width: 100%; }
+  #left-section #new-post-form button {
+    margin-top: 5px; }
+  #left-section #events-container .events-list {
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+    padding-bottom: 60px; }
+    #left-section #events-container .events-list .delete-button {
+      color: red;
+      font-size: large;
+      float: right;
+      margin-top: -2.5%; }
+  #left-section #events-container #event-form textarea, #left-section #events-container #event-form input {
+    margin-bottom: 5px;
+    width: 100%;
+    border: 0.5px solid gray; }
+  #left-section #events-container #event-form .button-box {
+    padding-top: 5px; }
+    #left-section #events-container #event-form .button-box .btn-1, #left-section #events-container #event-form .button-box .btn-2 {
+      width: 49%; }
 
 .post-display h3 {
   text-align: center; }
@@ -43,6 +53,20 @@ body {
   .post-display ul li {
     list-style: none; }
 
-.friends-list {
-  padding-top: 8px;
-  border-top: 1px solid lightgray; }
+#friends-section {
+  background-color: #f8f8f8; }
+  #friends-section .form-control {
+    border-radius: 5px; }
+  #friends-section .friends-list {
+    padding-top: 8px;
+    border-top: 1px solid lightgray; }
+
+.bg {
+  position: relative;
+  text-align: center; }
+  .bg img {
+    width: 100%; }
+  .bg .top-left {
+    position: absolute;
+    top: 100px;
+    left: 160px; }

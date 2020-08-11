@@ -1,15 +1,28 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 
 
+<nav aria-label="breadcrumb" class="mt-5">
+  <ol class="breadcrumb shadow-lg p-3 mb-5 bg-#e9ecef rounded mt-5">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+  </ol>
+</nav>
+
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-8 offset-sm-2">
-      <div class="center_align">
-        <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
-      </div>
+
+
       <% if(user.id == profile_user.id) { %>
       <!-- If user matches then show the form to update profile details -->
+
+      <!-- Displaying Profile Image -->
+      <div class="center_align mb-3">
+        <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
+      </div>
+
       <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Name</label>
           <div class="col-sm-7">
@@ -28,23 +41,28 @@
           <label class="col-sm-3 col-form-label">Profile Picture</label>
           <div class="col-sm-7">
             <input type="file" class="form-control-file" name="avatar" placeholder="Profile Picture"
-            onchange="readURL(this);" />
+              onchange="readURL(this);" />
             <img class="float-left" id="preview" alt="Image Preview">
           </div>
         </div>
         <button class="btn btn-outline-primary" type="submit">Update</button>
+
       </form>
+
       <%}else{%>
       <!-- else show only the profile info -->
+
+      <!-- Displaying Profile Image -->
+      <div class="center_align mb-3">
+        <img src="<%= profile_user.avatar %>" alt="<%= user.name %>" width="100">
+      </div>
+
       <p><%= profile_user.name %></p>
       <p><%= profile_user.email %></p>
       <% } %>
     </div>
   </div>
 </div>
-
-
-
 
 
 <!-- Image Preview -->

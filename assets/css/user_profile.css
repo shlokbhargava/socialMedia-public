@@ -1,11 +1,13 @@
 body {
   background: none; }
 
-.container {
-  margin-top: 20px; }
-  .container .center_align {
-    text-align: center; }
+.container .center_align {
+  text-align: center; }
+  .container .center_align img {
+    border-radius: 50%;
+    height: 155px;
+    width: 175px; }
 
-#preview {
+.container #preview {
   background-color: lightgray;
   width: 100; }

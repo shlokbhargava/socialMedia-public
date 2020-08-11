@@ -6,7 +6,7 @@ exports.updateProfile = (user) => {
     let htmlString = nodeMailer.renderTemplate({user: user}, '/users/update_profile.ejs');
 
     nodeMailer.transporter.sendMail({
-        from: '******',
+        from: 'project.cn20@gmail.com',
         to: user.email, 
         subject: "Profile Details Updated",
         html: htmlString

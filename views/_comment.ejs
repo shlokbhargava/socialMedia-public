@@ -3,7 +3,11 @@
         <%= comment.content %>
         <% if (locals.user && locals.user.id == comment.user.id || locals.user && locals.user.id == post.user.id) { %>
             <small>
-                <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">X</a>
+                <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </a>
             </small>
         <% } %>
         <br>
@@ -14,7 +18,7 @@
         <!-- display the likes of the comment, if the user is logged in, then show the link to toggle likes, else, just show the count -->
         <small>
             <% if(locals.user) { %>
-                <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%= comment._id %>&type=Comment"><%= comment.likes.length %> Likes</a>
+                <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%= comment._id %>&type=Comment"><i class="fas fa-thumbs-up"></i> <%= comment.likes.length %></a>
             <% } else { %>
                 <%= comment.likes.length %> Likes 
             <% } %>

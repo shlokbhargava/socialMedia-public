@@ -3,4 +3,5 @@ body {
   background-image: url("../images/bg3.png");
   background-size: auto;
   z-index: -1;
-  background: fixed, 0.3; }
+  background: fixed, 0.3;
+  font-family: 'Noto Sans JP'; }

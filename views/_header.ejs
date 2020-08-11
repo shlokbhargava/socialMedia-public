@@ -1,44 +1,51 @@
 <link rel="stylesheet" href="/css/header.css">
 
 <header>
-    <nav class="navbar navbar-dark">
+  <nav class="navbar navbar-dark fixed-top mb-5">
 
-      <!-- When the User is signed in -->
-      <% if(locals.user) { %>
-        <ul class="mr-auto mb-0">
-          <li class="navbar-text">
-            <a>
-              Codeial | <%= title %>
-            </a>
-          </li>
-        </ul>
-        <ul class="ml-auto mb-0">
-          <li class="navbar-text">
-            <a style="cursor: pointer" href="/users/signin">
-                <i class="fas fa-user"></i>&nbsp; <%= user.name %>
-            </a>
-          </li>
-          <li class="navbar-text">
-            <a style="cursor: pointer" href="/users/signout">
-              <i class="fas fa-sign-out-alt"></i>&nbsp; Sign Out
-            </a>
-          </li>
-        </ul>  
-      <% } else { %>
-        
-        <!-- When user is not signed in -->
-        <ul class="ml-auto mb-0">
-          <li class="navbar-text">
-            <a style="cursor: pointer" href="/users/signup">
-              <i class="fas fa-user-plus"></i>&nbsp; Sign Up
-            </a>
-          </li>
-          <li class="navbar-text">
-            <a style="cursor: pointer" href="/users/signin">
-              <i class="fas fa-sign-in-alt"></i>&nbsp; Sign In
-            </a>
-          </li>
-        </ul>
-      <% }%>        
-    </nav>    
+    <!-- When the User is signed in -->
+    <% if(locals.user) { %>
+    <ul class="mr-auto mb-0">
+      <li class="navbar-text">
+        <a>
+          Codeial | <%= title %>
+        </a>
+      </li>
+    </ul>
+    <ul class="ml-auto mb-0">
+      <li class="navbar-text">
+        <a style="cursor: pointer" href="/users/profile/<%= user._id %>">
+          <i class="fas fa-user"></i>&nbsp; <%= user.name %>
+        </a>
+      </li>
+      <li class="navbar-text">
+        <a style="cursor: pointer" href="/users/signout">
+          <i class="fas fa-sign-out-alt"></i>&nbsp; Sign Out
+        </a>
+      </li>
+    </ul>
+    <% } else { %>
+
+    <!-- When user is not signed in -->
+    <ul class="mr-auto mb-0">
+      <li class="navbar-text">
+        <a>
+          Codeial | <%= title %>
+        </a>
+      </li>
+    </ul>
+    <ul class="ml-auto mb-0">
+      <li class="navbar-text">
+        <a style="cursor: pointer" href="/users/signup">
+          <i class="fas fa-user-plus"></i>&nbsp; Sign Up
+        </a>
+      </li>
+      <li class="navbar-text">
+        <a style="cursor: pointer" href="/users/signin">
+          <i class="fas fa-sign-in-alt"></i>&nbsp; Sign In
+        </a>
+      </li>
+    </ul>
+    <% }%>
+  </nav>
 </header>

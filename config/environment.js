@@ -4,21 +4,21 @@ const development = {
     name: '*****',
     asset_path: './assets',
     session_cookie_key: '*****',
-    db: 'codeial_development',
+    db: '******',
     smtp: {
         service: 'gmail',
         host: "smtp.gmail.com",
         port: 587,
         secure: false, 
         auth: {
-          user: "******",
-          pass: "*******"
+          user: "*******",
+          pass: "********"
         }
     },
-    google_client_id: "***********",
-    google_client_secret: "**********",
-    google_call_back_url: "http://localhost:8000/users/auth/google/callback",
-    jwt_secret: '******l',
+    google_client_id: "********",
+    google_client_secret: "******",
+    google_call_back_url: "******",
+    jwt_secret: '****',
     
 }
 
